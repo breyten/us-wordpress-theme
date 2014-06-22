@@ -1,8 +1,8 @@
-===Bootstrap Basic===
-Author: Vee Winch
-Author URI: http://okvee.net
-Description: Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
-Text Domain: bootstrap-basic
+===US Basic===
+Author: Breyten Ernsting
+Author URI: http://yerb.net
+Description: US theme, based on Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
+Text Domain: us-basic
 Domain Path: /languages/
 Tags: white, gray, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
 
@@ -20,7 +20,7 @@ Bootstrap Basic is based on the _s (Underscores) starter theme by Automattic Inc
 
 ==Description==
 
-Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
+US theme, based on Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
 
 ==More feature==
 
