@@ -37,89 +37,17 @@
           <div class="icon-bar"></div>
           <div class="icon-bar"></div>
           <div class="icon-bar"></div>
-        </button><a class="navbar-brand" href="/"><img class="logo" src="/img/logo-top.png" alt="US Volleybal Amsterdam" /></a>
+	</button><a class="navbar-brand" href="/"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo-top.png" alt="US Volleybal Amsterdam" /></a>
       </div>
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a class="active" page="/" href="/">Home</a>
-          </li>
-          <li class="dropdown">
-            <a class="" page="/" href="/vereniging/">Vereniging</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="/vereniging/bestuur/">Bestuur</a>
-              </li>
-              <li>
-                <a href="/vereniging/technischecommissie/">Technische commissie</a>
-              </li>
-              <li>
-                <a href="/vereniging/competitiecommissie/">Competitie commissie</a>
-              </li>
-              <li>
-                <a href="/vereniging/sponsorcommissie/">Sponsor commissie</a>
-              </li>
-              <li>
-                <a href="/vereniging/jeugdcommissie/">Jeugd commissie</a>
-              </li>
-              <li>
-                <a href="/vereniging/activiteitencommissie/">Activiteiten commissie</a>
-              </li>
-              <li>
-                <a href="/vereniging/redactiecommissie/">PR/Redactie commissie</a>
-              </li>
-              <li>
-                <a href="/vereniging/materialencommissie/">Materialen commissie</a>
-              </li>
-              <li>
-                <a class="" page="/" href="/vereniging/sponsor-worden/">Sponsor worden</a>
-              </li>
-              <li>
-                <a class="" page="/" href="/vereniging/vrienden-van-us/">Vrienden van US</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="" page="/" href="/competitie/">Competitie</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="" page="/" href="/competitie/">Schema vlag- en zaaldienst</a>
-              </li>
-              <li>
-                <a class="" page="/" href="/competitie/vlaginstructie/">Vlaginstructie</a>
-              </li>
-              <li>
-                <a class="" page="/" href="/competitie/zaaldienst/">Zaaldienst instructie</a>
-              </li>
-              <li>
-                <a class="" page="/" href="/competitie/invalregelingen/">Invalregelingen</a>
-              </li>
-              <li>
-                <a class="" page="/" href="/competitie/verzetten/">Wedstrijden verzetten</a>
-              </li>
-              <li>
-                <a class="" page="/" href="/competitie/scheidsrechters/">Scheidsrechters leveren</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="" page="/" href="/teams/">Teams</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="" page="/" href="/teams/">Teamindeling</a>
-              </li>
-              <li>
-                <a class="" page="/" href="/teams/trainingschema/">Trainingschema</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="" page="/" href="/nieuws/">Nieuws</a>
-          </li>
-          <li>
-            <a class="" page="/" href="/contact/">Contact</a>
-          </li>
-        </ul>
+		<?php wp_nav_menu(array(
+			'theme_location' => 'primary',
+			'container' => false,
+			'menu_class' => 'nav navbar-nav navbar-right',
+			'items_wrap' => '<ol id="%1$s" class="%2$s">%3$s</ol>',
+			'walker' => new BootstrapBasicMyWalkerNavMenu()
+		)); ?>
+		<?php dynamic_sidebar('navbar-right'); ?>
       </div>
     </div>
   </div><!--Begin content-->
