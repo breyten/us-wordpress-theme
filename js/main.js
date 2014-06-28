@@ -1,4 +1,3 @@
-$ = jQuery;
   $(document).ready(function() {
     var collapseMenu, detailHeight, newsSlider;
     newsSlider = function() {

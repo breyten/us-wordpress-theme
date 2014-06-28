@@ -50,6 +50,9 @@
 
   <!--wordpress footer-->
   <?php wp_footer(); ?>
+  <script type="text/javascript">
+  $ = jQuery;
+  </script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/main.js" type="text/javascript"></script>
 </body>
 <html>
