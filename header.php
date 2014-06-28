@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title><?php wp_title('|', true, 'right'); ?></title>
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/main.css" />
     <link rel="icon" type="image/ico" href="/img/favicon.ico" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -21,9 +21,9 @@
 	<!--
     <script src="/js/jquery.1.9.0.min.js" type="text/javascript"></script>
 	<script src="/js/modernizr.custom.js" type="text/javascript"></script> -->
-	<script src="/js/respond.js" type="text/javascript"></script>
-	<script src="/js/slick.js" type="text/javascript"></script>
-	<script src="/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/respond.js" type="text/javascript"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/slick.js" type="text/javascript"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
   </head>
 </html>
 <body <?php body_class(); ?>>
