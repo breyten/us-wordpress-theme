@@ -31,26 +31,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           </div>
           <!--Rechter kolom, 1/3-->
           <div class="col-md-4 col-sm-4">
-            <h1>
-              Handige links
-            </h1>
-            <ul>
-              <li>
-                <a href="/vereniging/sponsor-worden/">Sponsor worden</a>
-              </li>
-              <li>
-                <a href="/contact/">Lid worden</a>
-              </li>
-              <li>
-                <a href="/teams/trainingschema/">Trainingschema</a>
-              </li>
-              <li>
-                <a href="/competitie/vlagdienst/">Vlagschema en zaaldiensten</a>
-              </li>
-              <li>
-                <a href="/contact/">Neem contact op</a>
-              </li>
-            </ul>
+			<?php get_sidebar('right'); ?>
           </div>
         </div>
       </div>
@@ -79,5 +60,4 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 						<?php } // endif; ?>
 					</main>
 				</div>
-<?php get_sidebar('right'); ?>
 <?php get_footer(); ?>
