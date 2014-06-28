@@ -42,11 +42,26 @@
       <div class="collapse navbar-collapse">
 		<?php
         // ugly hack to get bootstrap compatible menus :/
+        /*
         $menu = wp_nav_menu(array(
-            'echo' => false,
+            'echo' => true,
 			'theme_location' => 'primary',
 			'container' => false,
-		));
+            'walker' => new wp_bootstrap_navwalker()
+		));*/
+
+        wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav navbar-right',
+                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                'walker'            => new wp_bootstrap_navwalker())
+            );
+/*
         echo str_ireplace(
             array(
                 '<ul>',
@@ -65,7 +80,7 @@
                 'dropdown'
             ),
             $menu
-        );
+        ); */
         ?>
 		<?php dynamic_sidebar('navbar-right'); ?>
       </div>
