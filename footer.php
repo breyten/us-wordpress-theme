@@ -6,8 +6,30 @@
  */
 ?>
 
+<!--Sponsors-->
+<section id="sponsors">
+      <div class="container">
+        <div class="row white">
+          <div class="col-md-12">
+            <h1>
+              Sponsors
+            </h1>
+            <div id="carousel">
+                <?php
+                // Get the last 10 posts in the special_cat category.
+                query_posts('post_type=sponsor&posts_per_page=10');
+                while (have_posts()) {
+                    the_post();
+                    get_template_part('content', 'sponsor');
+                }
+                ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-  <!--Footer--><footer>
+    <!--Footer--><footer>
     <div class="container">
       <ul>
         <li>
