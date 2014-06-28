@@ -1,25 +1,12 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?> 
-		<div class="clearfix"></div>
-		<?php
-		/**
-		 * This wp_link_pages option adapt to use bootstrap pagination style.
-		 * The other part of this pager is in inc/template-tags.php function name bootstrapBasicLinkPagesLink() which is called by wp_link_pages_link filter.
-		 */
-		wp_link_pages(array(
-			'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
-			'after'  => '</ul></div>',
-			'separator' => ''
-		));
-		?>
-	</div><!-- .entry-content -->
-	
-	<footer class="entry-meta">
-		<?php bootstrapBasicEditPostLink(); ?> 
-	</footer>
-</article><!-- #post-## -->
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <ul class="breadcrumb">
+      <li>
+        <a href="/"><span class="glyphicon glyphicon-home"></span></a>
+      </li>
+      <li>
+        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+      </li>
+    </ul>
+  	<?php the_content(); ?>
+</div>
