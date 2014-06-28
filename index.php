@@ -15,6 +15,47 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 <section id="header">
 	<?php echo wp_get_attachment_image( 16, "large" ); ?>
 </section>
+
+<section id="main">
+      <div class="container white">
+        <div class="row">
+          <!--Linker kolom, 2/3-->
+          <div class="col-md-8 col-sm-8">
+            <h1>
+              Welkom bij US Volleybal
+            </h1>
+            <p>
+				<?php echo get_bloginfo ( 'description' ); ?>
+            </p>
+            <a class="btn primary" href="/vereniging/sponsor-worden/">Sponsor worden</a><a class="btn secundary" href="/contact/">Lid worden</a>
+          </div>
+          <!--Rechter kolom, 1/3-->
+          <div class="col-md-4 col-sm-4">
+            <h1>
+              Handige links
+            </h1>
+            <ul>
+              <li>
+                <a href="/vereniging/sponsor-worden/">Sponsor worden</a>
+              </li>
+              <li>
+                <a href="/contact/">Lid worden</a>
+              </li>
+              <li>
+                <a href="/teams/trainingschema/">Trainingschema</a>
+              </li>
+              <li>
+                <a href="/competitie/vlagdienst/">Vlagschema en zaaldiensten</a>
+              </li>
+              <li>
+                <a href="/contact/">Neem contact op</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</section>
+
 <?php get_sidebar('left'); ?>
 				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
 					<main id="main" class="site-main" role="main">

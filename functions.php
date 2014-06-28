@@ -1,7 +1,7 @@
 <?php
 /**
  * Bootstrap Basic theme
- * 
+ *
  * @package bootstrap-basic
  */
 
@@ -17,37 +17,37 @@ if (!isset($content_width)) {
 /**
  * Setup theme and register support wp features.
  */
-function bootstrapBasicSetup() 
+function bootstrapBasicSetup()
 {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * 
+	 *
 	 * copy from underscores theme
 	 */
 	load_theme_textdomain('bootstrap-basic', get_template_directory() . '/languages');
-	
+
 	// add theme support post and comment automatic feed links
 	add_theme_support('automatic-feed-links');
-	
+
 	// enable support for post thumbnail or feature image on posts and pages
 	add_theme_support('post-thumbnails');
-	
+
 	// add support menu
 	register_nav_menus(array(
 		'primary' => __('Primary Menu', 'bootstrap-basic'),
 	));
-	
+
 	// add post formats support
 	add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
-	
+
 	// add support custom background
 	add_theme_support(
-		'custom-background', 
+		'custom-background',
 		apply_filters(
-			'bootstrap_basic_custom_background_args', 
+			'bootstrap_basic_custom_background_args',
 			array(
-				'default-color' => 'ffffff', 
+				'default-color' => 'ffffff',
 				'default-image' => ''
 			)
 		)
@@ -59,7 +59,7 @@ add_action('after_setup_theme', 'bootstrapBasicSetup');
 /**
  * Register widget areas
  */
-function bootstrapBasicWidgetsInit() 
+function bootstrapBasicWidgetsInit()
 {
 	register_sidebar(array(
 		'name'          => __('Header right', 'bootstrap-basic'),
@@ -69,7 +69,7 @@ function bootstrapBasicWidgetsInit()
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	));
-	
+
 	register_sidebar(array(
 		'name'          => __('Navigation bar right', 'bootstrap-basic'),
 		'id'            => 'navbar-right',
@@ -78,7 +78,7 @@ function bootstrapBasicWidgetsInit()
 		'before_title'  => '',
 		'after_title'   => '',
 	));
-	
+
 	register_sidebar(array(
 		'name'          => __('Sidebar left', 'bootstrap-basic'),
 		'id'            => 'sidebar-left',
@@ -87,7 +87,7 @@ function bootstrapBasicWidgetsInit()
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	));
-	
+
 	register_sidebar(array(
 		'name'          => __('Sidebar right', 'bootstrap-basic'),
 		'id'            => 'sidebar-right',
@@ -96,7 +96,7 @@ function bootstrapBasicWidgetsInit()
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	));
-	
+
 	register_sidebar(array(
 		'name'          => __('Footer left', 'bootstrap-basic'),
 		'id'            => 'footer-left',
@@ -105,7 +105,7 @@ function bootstrapBasicWidgetsInit()
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	));
-	
+
 	register_sidebar(array(
 		'name'          => __('Footer right', 'bootstrap-basic'),
 		'id'            => 'footer-right',
@@ -121,14 +121,14 @@ add_action('widgets_init', 'bootstrapBasicWidgetsInit');
 /**
  * Enqueue scripts & styles
  */
-function bootstrapBasicEnqueueScripts() 
+function bootstrapBasicEnqueueScripts()
 {
 	wp_enqueue_style('bootstrap-basic-style', get_stylesheet_uri());
 	wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style('bootstrap-theme-style', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
 	wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css');
 	wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css');
-	
+
 	wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js');
 	wp_enqueue_script('respond-script', get_template_directory_uri() . '/js/vendor/respond.min.js');
 	wp_enqueue_script('html5-shiv-script', get_template_directory_uri() . '/js/vendor/html5shiv.js');
@@ -137,6 +137,33 @@ function bootstrapBasicEnqueueScripts()
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js');
 }// bootstrapBasicEnqueueScripts
 add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
+
+ function fb_move_admin_bar() {
+    echo '
+    <style type="text/css">
+    body {
+    margin-top: -28px;
+    padding-bottom: 28px;
+    }
+    body.admin-bar #wphead {
+       padding-top: 0;
+    }
+    body.admin-bar #footer {
+       padding-bottom: 28px;
+    }
+    #wpadminbar {
+        top: auto !important;
+        bottom: 0;
+    }
+    #wpadminbar .quicklinks .menupop ul {
+        bottom: 28px;
+    }
+    </style>';
+}
+// on backend area
+add_action( 'admin_head', 'fb_move_admin_bar' );
+// on frontend area
+add_action( 'wp_head', 'fb_move_admin_bar' );
 
 
 /**
@@ -170,4 +197,3 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/widgets/BootstrapBasicSearchWidget.php';
 require get_template_directory() . '/inc/template-widgets-hook.php';
-
