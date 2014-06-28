@@ -44,21 +44,14 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           Recent nieuws
         </h2>
         <ul class="dotted">
-          <li>
-            <a href="/nieuws/2014/05/24/Help-de-sponsorcommissie.html">Help de sponsorcommissie</a>
-          </li>
-          <li>
-            <a href="/nieuws/2014/04/04/Qoppeltjestoernooi.html">Save the date - US Qoppeltjestoernooi 2014</a>
-          </li>
-          <li>
-            <a href="/nieuws/2014/03/23/Eindfeest.html">Spetterend eindfeest - "Anders, namelijk"</a>
-          </li>
-          <li>
-            <a href="/nieuws/2014/03/02/US-Grastoernooi.html">US Grastoernooi 2014</a>
-          </li>
-          <li>
-            <a href="/nieuws/2014/01/01/US-Bedrijventoernooi.html">US Gras Bedrijventoernooi</a>
-          </li>
+        <?php
+        // Get the last 10 posts in the special_cat category.
+        query_posts('post_type=post&posts_per_page=5');
+        while (have_posts()) {
+            the_post();
+            get_template_part('content', 'recent');
+        }
+        ?>
         </ul>
       </div>
     </div>
