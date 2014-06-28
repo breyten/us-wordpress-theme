@@ -38,8 +38,20 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 </section>
 
 <?php get_sidebar('left'); ?>
-				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
-					<main id="main" class="site-main" role="main">
+
+<section id="news">
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <a class="prev" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/news-prev.png" /></a>
+            </li>
+            <li>
+              <a class="next" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/news-next.png" /></a>
+            </li>
+          </ul>
+        </nav>
+        <div id="panel">
 						<?php if (have_posts()) { ?>
 						<?php
 						// start the loop
@@ -50,14 +62,15 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 							* If you want to override this in a child theme, then include a file
 							* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 							*/
-							get_template_part('content', get_post_format());
+							get_template_part('content', 'short');
 						}// end while
 
-						bootstrapBasicPagination();
+						//bootstrapBasicPagination();
 						?>
 						<?php } else { ?>
 						<?php get_template_part('no-results', 'index'); ?>
 						<?php } // endif; ?>
-					</main>
-				</div>
+		</div>
+	</div>
+</section>
 <?php get_footer(); ?>
