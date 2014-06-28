@@ -165,7 +165,25 @@ add_action( 'admin_head', 'fb_move_admin_bar' );
 // on frontend area
 add_action( 'wp_head', 'fb_move_admin_bar' );
 
-
+function us_custom_init() {
+	register_post_type(
+		'sponsor',
+		array(
+			'label' => 'Sponsors',
+			'labels' => array(
+				'singular_name' => 'Sponsor',
+			),
+			'description' => 'Een sponsor',
+			'public' => true,
+			'exclude_from_search' => true,
+			'publicly_queryable' => false,
+			'show_in_nav_menus' => false,
+			'menu_position' => 8,
+		)
+	);
+	add_image_size( 'sponsor', 102, 52, true ); //(cropped)
+}
+add_action( 'init', 'us_custom_init' );
 /**
  * Custom template tags for this theme.
  */
