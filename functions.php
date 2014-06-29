@@ -197,7 +197,7 @@ function us_custom_init() {
 			//'show_in_nav_menus' => true,
 			'menu_position' => 9,
 			'supports' => array(
-			  'title', 'editor', 'custom-fields'
+			  'title', 'editor', 'custom-fields', 'thumbnail'
 			),
 			'rewrite' => array(
 			  'slug' => 'team'
