@@ -182,8 +182,39 @@ function us_custom_init() {
 		)
 	);
 	add_image_size( 'sponsor', 102, 52, true ); //(cropped)
+
+	register_post_type(
+		'team',
+		array(
+			'label' => 'Teams',
+			'labels' => array(
+				'singular_name' => 'Team',
+			),
+			'description' => 'Een team',
+			'public' => true,
+			//'exclude_from_search' => false,
+			//'publicly_queryable' => false,
+			//'show_in_nav_menus' => true,
+			'menu_position' => 9,
+			'supports' => array(
+			  'title', 'editor', 'custom-fields'
+			),
+			'rewrite' => array(
+			  'slug' => 'team'
+			)
+		)
+	);
+
+  //flush_rewrite_rules();
+
 }
 add_action( 'init', 'us_custom_init' );
+
+function my_rewrite_flush() {
+    flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'my_rewrite_flush' );
+
 /**
  * Custom template tags for this theme.
  */
