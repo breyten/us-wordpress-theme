@@ -29,8 +29,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           else
           $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
           if ($children) { ?>
-          <ul>
-          <?php echo $children; ?>
+          <ul class="nav nav-pills collapsable">
+          <?php echo str_ireplace(' current_page_item"><a ', '"><a class="active" ', $children); ?>
           </ul>
           <?php } ?>
         <?php get_sidebar('left'); ?> 
