@@ -38,7 +38,6 @@
           <div class="icon-bar"></div>
 	</button><a class="navbar-brand" href="/"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo-top.png" alt="US Volleybal Amsterdam" /></a>
       </div>
-      <div class="collapse navbar-collapse">
 		<?php
         // ugly hack to get bootstrap compatible menus :/
         /*
@@ -55,7 +54,7 @@
                 'depth'             => 2,
                 'container'         => 'div',
                 'container_class'   => 'collapse navbar-collapse',
-                'container_id'      => 'bs-example-navbar-collapse-1',
+                'container_id'      => 'navbar-collapse',
                 'menu_class'        => 'nav navbar-nav navbar-right',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
