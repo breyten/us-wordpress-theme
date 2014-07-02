@@ -6,7 +6,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> style="margin-top: 0px !important;">
+<html <?php language_attributes(); ?>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
