@@ -1,7 +1,7 @@
 <?php
 /**
  * Template for dispalying single post (read full post page).
- * 
+ *
  * @package bootstrap-basic
  */
 
@@ -11,7 +11,7 @@ get_header();
  * determine main column size from actived sidebar
  */
 $main_column_size = bootstrapBasicGetMainColumnSize();
-?> 
+?>
 <section id="header">
   <?php
   // check if the post has a Post Thumbnail assigned to it.
@@ -23,6 +23,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
   <div class="container white">
     <div class="row">
       <div id="sidebar" class="col-sm-4 col-md-3">
+        <a class="heading" href="#">Menu</a>
         <?php
           if($post->post_parent)
           $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
@@ -33,21 +34,21 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           <?php echo str_ireplace(' current_page_item"><a ', '"><a class="active" ', $children); ?>
           </ul>
           <?php } ?>
-        <?php get_sidebar('left'); ?> 
+        <?php get_sidebar('left'); ?>
       </div>
       <div id="nieuws" class="col-sm-8 col-md-9">
-				<?php 
+				<?php
 				while (have_posts()) {
 					the_post();
 
 					get_template_part('content', 'page');
 
 					echo "\n\n";
-					
+
 					bootstrapBasicPagination();
 
 					echo "\n\n";
-					
+
 					// If comments are open or we have at least one comment, load up the comment template
 					if (comments_open() || '0' != get_comments_number()) {
 						comments_template();
@@ -56,10 +57,10 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 					echo "\n\n";
 
 				} //endwhile;
-				?>         
+				?>
       </div>
     </div>
   </div>
-</section>            
-<?php //get_sidebar('right'); ?> 
+</section>
+<?php //get_sidebar('right'); ?>
 <?php get_footer(); ?>
