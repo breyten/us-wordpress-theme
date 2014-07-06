@@ -19,7 +19,9 @@ if ((get_post_type() == 'team') && has_post_thumbnail() ) {
   	<?php the_post_thumbnail('large'); ?>
 </section>
 <?php } ?>
-<?php get_sidebar('left'); ?> 
+<?php get_sidebar('left'); ?>
+
+<!-- Needs check if header image exist, else: .no-header -->
 <section id="main" class="no-header">
   <div class="container white">
     <div class="row">

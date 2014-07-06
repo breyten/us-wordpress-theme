@@ -77,6 +77,10 @@ h2 {
   line-height: 21px;
   margin-bottom: 5px; }
 
+/* line 19, /Users/Tom/Desktop/Projecten/US/middleman/source/css/main.css.sass */
+section {
+  margin-top: 30px; }
+  
 /* line 39, /Users/Tom/Desktop/Projecten/US/middleman/source/css/base/base.sass */
 .container {
   margin: 0 auto; }
@@ -555,10 +559,6 @@ small.label {
 /* line 2, /Users/Tom/Desktop/Projecten/US/middleman/source/css/sections/sponsors.sass */
 #sponsors .col-md-12 {
   overflow: hidden; }
-
-/* line 19, /Users/Tom/Desktop/Projecten/US/middleman/source/css/main.css.sass */
-section {
-  margin-top: 30px; }
 
 /* line 22, /Users/Tom/Desktop/Projecten/US/middleman/source/css/main.css.sass */
 #main {
