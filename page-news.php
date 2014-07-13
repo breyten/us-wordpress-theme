@@ -25,10 +25,44 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           <div id="articles">
           <table>
               <?php
+
+              $temp_query = $wp_query;
+
+              $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
               // Get the last 10 posts in the special_cat category.
-              $news_query = new WP_Query('post_type=post&posts_per_page=10');
-              while ($news_query->have_posts()) {
-                  $news_query->the_post();
+              $wp_query = new WP_Query(array(
+                  'post_type' => post,
+                  'posts_per_page' => '5',
+                  'paged' => $paged
+              ));
+
+              $wp_query->query_vars[ 'paged' ] > 1 ? $current = $wp_query->query_vars[ 'paged' ] : $current = 1;
+
+              //set the "paginate_links" array to do what we would like it it. Check the codex for examples http://codex.wordpress.org/Function_Reference/paginate_links
+              $pagination = array(
+                'base' => @add_query_arg( 'paged', '%#%' ),
+                //'format' => '',
+                'showall' => false,
+                'end_size' => 4,
+                'mid_size' => 4,
+                'total' => $wp_query->max_num_pages,
+                'current' => $current,
+                'type' => 'list',
+                'prev_text' => '&larr;',
+                'next_text' => '&rarr;'
+              );
+
+              //build the paging links
+              if ( $wp_rewrite->using_permalinks() )
+                $pagination[ 'base' ] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
+
+              //more paging links
+              if ( !empty( $wp_query->query_vars[ 's' ] ) )
+                $pagination[ 'add_args' ] = array( 's' => get_query_var( 's' ) );
+
+              while ($wp_query->have_posts()) {
+                  $wp_query->the_post();
               ?>
               <tr>
                 <td>
@@ -39,10 +73,28 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
               </tr>
               <?php
               }
+
               ?>
           </table>
           </div>
+
           <?php
+              echo str_replace(
+                  array(
+                      "<ul class='page-numbers'>",
+                      '<li><a class="prev',
+                      '<li><a class="next'
+                  ),
+                  array(
+                      '<ul class="pager">',
+                      '<li class="previous"><a class="prev',
+                      '<li class="next"><a class="next'
+                  ),
+                  paginate_links($pagination)
+              );
+
+              $wp_query = $temp_query;
+
 					echo "\n\n";
 
 					bootstrapBasicPagination();
