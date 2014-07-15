@@ -11,7 +11,7 @@
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </li>
     </ul>
-  	<?php //the_content(); ?>
+  	<?php the_excerpt(); ?>
   	<div class="slider">
   	<?php
   	$media = get_attached_media( 'image' );
