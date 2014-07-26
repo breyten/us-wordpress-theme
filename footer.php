@@ -36,13 +36,14 @@
           <a href="#">© 2005-2014 US volleybal</a>
         </li>
         <li>
-          <a href="#">disclaimer</a>
+          <a href="/disclaimer/">disclaimer</a>
         </li>
+        <!--
         <li>
           <a href="#">sitemap</a>
-        </li>
+      </li> -->
         <li>
-          <a href="#">mail de webmaster</a>
+          <a href="/contact/">mail de webmaster</a>
         </li>
       </ul>
     </div>
