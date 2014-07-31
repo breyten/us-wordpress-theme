@@ -19,7 +19,13 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
   	the_post_thumbnail('large');
   } ?>
 </section>
+<?php
+// check if the post has a Post Thumbnail assigned to it.
+if ( has_post_thumbnail() ) { ?>
 <section id="main">
+<?php } else { ?>
+<section id="main" class="no-header">
+<?php } ?>
   <div class="container white">
     <div class="row">
       <div id="sidebar" class="col-sm-4 col-md-3">
