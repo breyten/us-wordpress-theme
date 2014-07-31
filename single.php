@@ -23,7 +23,7 @@ if ((get_post_type() == 'team') && has_post_thumbnail() ) {
 
 <!-- Needs check if header image exist, else: .no-header -->
 <?php
-if (has_post_thumbnail()) {
+if (!has_post_thumbnail()) {
     $main_class='class="no-header"';
 } else {
     $main_class="";
