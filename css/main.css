@@ -351,11 +351,11 @@ section#header {
   margin-bottom: -64px; }
   @media only screen and (min-width: 481px) and (max-width: 767px) {
     /* line 1, /Users/Tom/Desktop/Projecten/US/middleman/source/css/sections/header.sass */
-    #header {
+    section#header {
       margin-bottom: 0; } }
   @media only screen and (max-width: 480px) {
     /* line 1, /Users/Tom/Desktop/Projecten/US/middleman/source/css/sections/header.sass */
-    #header {
+    section#header {
       margin-bottom: 0; } }
   /* line 8, /Users/Tom/Desktop/Projecten/US/middleman/source/css/sections/header.sass */
   #header img {

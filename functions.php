@@ -127,7 +127,7 @@ function bootstrapBasicEnqueueScripts()
   wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
   wp_enqueue_style('bootstrap-theme-style', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
   wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css');
-  wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css');
+  //wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css');
 
   wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js');
   wp_enqueue_script('respond-script', get_template_directory_uri() . '/js/vendor/respond.min.js');
