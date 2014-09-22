@@ -11,7 +11,6 @@
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </li>
     </ul>
-  	<?php the_excerpt(); ?>
   	<div class="slider">
   	<?php
   	$media = get_attached_media( 'image' );
@@ -20,4 +19,8 @@
   	}
   	?>
   	</div>
+		<?php
+		//echo preg_replace("/\< *[img][^\>]*[.]*\>/i", "", get_the_content(), -1);
+		echo preg_replace("/\[caption .+?\[\/caption\]|\< *[img][^\>]*[.]*\>/i", "", get_the_content(), -1);
+		?>
 </div>
