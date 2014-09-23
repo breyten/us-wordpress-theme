@@ -5,7 +5,7 @@
         <a href="/"><span class="glyphicon glyphicon-home"></span></a>
       </li>
       <li>
-        <a href="/nieuws/index.html">Nieuws</a>
+        <a href="/nieuws/">Nieuws</a>
       </li>
       <li>
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

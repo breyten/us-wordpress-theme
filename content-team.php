@@ -5,7 +5,7 @@
         <a href="/"><span class="glyphicon glyphicon-home"></span></a>
       </li>
       <li>
-        <a href="/teams/index.html">Teams</a>
+        <a href="/teams/">Teams</a>
       </li>
       <li>
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
