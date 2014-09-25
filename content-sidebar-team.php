@@ -7,18 +7,37 @@
 <?php //var_dump($post_meta); ?>
 
 <?php
-foreach($post_meta as $name => $values) {
+function _output_meta($name, $values) {
   if (substr($name, 0, 1) != '_') {
     echo "<h2>$name</h2><ul>";
     foreach($values as $value) {
       if (substr($value, 0, 4) == 'http') {
         echo "<li><a href=\"$value\" target=\"_blank\">Naar de pagina</a></li>";
       } else {
-        echo "<li>$value</li>";        
+        echo "<li>$value</li>";
       }
     }
     echo '</ul>';
   }
+}
+
+$default_keys = array(
+  'Niveau', 'Trainingstijden', 'Trainer', 'Assistent trainer', 'Coach',
+  'TC-contantpersoon', 'Wedstrijdschema en stand'
+);
+
+$keys = array_keys($post_meta);
+
+foreach($default_keys as $key) {
+    if (array_key_exists($key, $post_meta)) {
+      _output_meta($key, $post_meta[$key]);
+    }
+}
+
+foreach($post_meta as $name => $values) {
+    if (!in_array($name, $default_keys)) {
+      _output_meta($name, $post_meta[$name]);
+    }
 }
 ?>
 </div>
