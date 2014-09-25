@@ -23,7 +23,7 @@ function _output_meta($name, $values) {
 
 $default_keys = array(
   'Niveau', 'Trainingstijden', 'Trainer', 'Assistent trainer', 'Coach',
-  'TC-contantpersoon', 'Wedstrijdschema en stand'
+  'Assistent coach', 'TC-contantpersoon', 'Wedstrijdschema en stand'
 );
 
 $keys = array_keys($post_meta);
