@@ -13,6 +13,8 @@ function _output_meta($name, $values) {
     foreach($values as $value) {
       if (substr($value, 0, 4) == 'http') {
         echo "<li><a href=\"$value\" target=\"_blank\">Naar de pagina</a></li>";
+      } elseif (filter_var($value,FILTER_VALIDATE_EMAIL) !== false) {
+        echo "<li><a href=\"mailto:$value\">$value</a></li>";
       } else {
         echo "<li>$value</li>";
       }
