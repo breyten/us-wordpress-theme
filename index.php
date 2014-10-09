@@ -13,7 +13,11 @@ get_header();
 $main_column_size = bootstrapBasicGetMainColumnSize();
 ?>
 <section id="header">
-	<?php echo wp_get_attachment_image( 365, "large" ); ?>
+	<?php
+		$fp_images = array(365, 380);
+		$fp_id =  $fp_images[mt_rand(0, count($fp_images) - 1)];
+		echo wp_get_attachment_image( $fp_id, "large" );
+	?>
 </section>
 
 <section id="main">
