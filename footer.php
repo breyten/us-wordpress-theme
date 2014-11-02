@@ -17,7 +17,7 @@
             <div id="carousel">
                 <?php
                 // Get the last 10 posts in the special_cat category.
-                query_posts('post_type=sponsor&posts_per_page=10');
+                query_posts('post_type=sponsor&posts_per_page=100');
                 while (have_posts()) {
                     the_post();
                     get_template_part('content', 'sponsor');

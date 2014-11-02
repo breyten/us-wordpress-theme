@@ -179,6 +179,9 @@ function us_custom_init() {
       //'publicly_queryable' => false,
       //'show_in_nav_menus' => false,
       'menu_position' => 8,
+      'supports' => array(
+        'title', 'editor', 'custom-fields', 'thumbnail'
+      ),
     )
   );
   add_image_size( 'sponsor', 102, 52, true ); //(cropped)
