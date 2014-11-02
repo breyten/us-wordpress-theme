@@ -175,9 +175,9 @@ function us_custom_init() {
       ),
       'description' => 'Een sponsor',
       'public' => true,
-      'exclude_from_search' => true,
-      'publicly_queryable' => false,
-      'show_in_nav_menus' => false,
+      //'exclude_from_search' => true,
+      //'publicly_queryable' => false,
+      //'show_in_nav_menus' => false,
       'menu_position' => 8,
     )
   );
