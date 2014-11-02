@@ -38,6 +38,8 @@ if ((get_post_type() == 'team') && has_post_thumbnail() ) {
 
           if (get_post_type() == 'team') {
             get_template_part('content', 'team');
+          } elseif (get_post_type() == 'sponsor') {
+            get_template_part('content', 'sponsorpage');
           } else {
             get_template_part('content', get_post_format());
           }
