@@ -573,7 +573,10 @@ small.label {
   /* line 26, /Users/Tom/Desktop/Projecten/US/middleman/source/css/main.css.sass */
   #main.no-header {
     padding-top: 94px; }
-
+@media only screen and (max-width: 767px) {
+  #main.no-header {
+    padding-top: 0; }
+}
 /* line 29, /Users/Tom/Desktop/Projecten/US/middleman/source/css/main.css.sass */
 #sponsors {
   margin-bottom: 40px; }
