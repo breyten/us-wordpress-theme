@@ -27,7 +27,12 @@ img.size-full {
     max-width: 97.5%;
     width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
-
+p img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
 #news article.post .wp-post-image {
   width: 275px;
   height: 206px;
