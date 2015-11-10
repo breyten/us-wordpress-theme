@@ -29,7 +29,7 @@ if ( has_post_thumbnail() ) { ?>
   <div class="container white">
     <div class="row">
       <div id="sidebar" class="col-sm-4 col-md-3">
-        <a class="heading" href="#">Menu</a>
+        <a class="heading" href="#">Menu <span class="caret"></span></a>
         <?php
           if($post->post_parent)
           $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
