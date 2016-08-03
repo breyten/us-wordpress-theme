@@ -8,7 +8,7 @@
 
 <?php
 function _output_meta($name, $values) {
-  if (substr($name, 0, 1) != '_') {
+  if ((substr($name, 0, 1) != '_') && (substr($name, 0, 3) != 'US_')) {
     echo "<h2>$name</h2><ul>";
     foreach($values as $value) {
       if (substr($value, 0, 4) == 'http') {
