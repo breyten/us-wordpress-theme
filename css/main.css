@@ -17,6 +17,17 @@
 .teams-overview .listing-item {
   margin: 5px 0;
 }
+
+@media only screen and (max-width: 320px) {
+  .teams-overview .listing-item {
+    text-align: center;
+  }
+  .teams-overview .listing-item a.title {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
 /* Image sizes and alignments */
 .entry-content img,
 .comment-content img,
