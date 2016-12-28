@@ -38,10 +38,14 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 			<?php get_sidebar('right'); ?>
           </div>
         </div>
+				<div class="row">
+					<div class="col-xs-12">
+					<?php get_sidebar('left'); ?>
+					</div>
+				</div>
       </div>
 </section>
 
-<?php get_sidebar('left'); ?>
 
 <section id="news">
       <div class="container">

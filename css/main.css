@@ -57,6 +57,10 @@ p img{
   height: 206px;
 }
 
+#menu-sponsor-acties {margin: 0; padding: 0;
+	list-style-type: none; list-style-image: none; }
+#menu-sponsor-acties li {display: inline; }
+
 /* line 1, /Users/Tom/Desktop/Projecten/US/middleman/source/css/base/base.sass */
 * {
   -webkit-box-sizing: border-box;
