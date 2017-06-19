@@ -45,6 +45,15 @@
         <li>
           <a href="/contact/">mail de webmaster</a>
         </li>
+        <li>
+          <a href="https://www.facebook.com/USvolleybal/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/USVolleybal"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/usvolleybal/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
       </ul>
     </div>
   </footer>
