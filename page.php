@@ -64,9 +64,9 @@ if ( has_post_thumbnail() ) { ?>
 
 				} //endwhile;
 				?>
+        <?php get_sidebar('right'); ?>
       </div>
     </div>
   </div>
 </section>
-<?php //get_sidebar('right'); ?>
 <?php get_footer(); ?>
