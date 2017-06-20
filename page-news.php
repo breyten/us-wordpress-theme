@@ -66,6 +66,13 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
               ?>
               <tr>
                 <td>
+                  <?php
+                  // check if the post has a Post Thumbnail assigned to it.
+                  if ( has_post_thumbnail() ) {
+                  	the_post_thumbnail('thumbnail');
+                  } ?>
+                </td>
+                <td>
                   <h1><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h1>
                   <p><?php the_excerpt(); ?></p>
                   <a href="<?php echo the_permalink(); ?>">Lees verder</a>
@@ -111,9 +118,12 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				} //endwhile;
 				?>
       </div>
+      <div id="sidebar" class="col-sm-4 col-md-3">
       <?php
       get_sidebar('right');
       ?>
+      </div>
+
     </div>
   </div>
 </section>

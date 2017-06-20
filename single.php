@@ -65,7 +65,14 @@ if ((get_post_type() == 'team') && has_post_thumbnail() ) {
       if (get_post_type() == 'team') {
         get_template_part('content-sidebar', 'team');
       } else {
+?>
+      <div id="sidebar" class="col-sm-4 col-md-3">
+
+<?php
         get_sidebar('right');
+?>
+      </div>
+<?php
       }
       ?>
     </div>
