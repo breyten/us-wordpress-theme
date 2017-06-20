@@ -112,7 +112,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				?>
       </div>
       <?php
-      get_template_part('content-sidebar', 'recent');
+      get_sidebar('right');
       ?>
     </div>
   </div>

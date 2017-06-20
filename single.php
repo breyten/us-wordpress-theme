@@ -65,7 +65,7 @@ if ((get_post_type() == 'team') && has_post_thumbnail() ) {
       if (get_post_type() == 'team') {
         get_template_part('content-sidebar', 'team');
       } else {
-        get_template_part('content-sidebar', 'recent');
+        get_sidebar('right');
       }
       ?>
     </div>
