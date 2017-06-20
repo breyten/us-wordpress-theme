@@ -23,7 +23,6 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
           ?>
           <div id="articles">
-          <table>
               <?php
 
               $temp_query = $wp_query;
@@ -64,25 +63,24 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
               while ($wp_query->have_posts()) {
                   $wp_query->the_post();
               ?>
-              <tr>
-                <td>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                   <?php
                   // check if the post has a Post Thumbnail assigned to it.
                   if ( has_post_thumbnail() ) {
                   	the_post_thumbnail('thumbnail');
                   } ?>
-                </td>
-                <td>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
                   <h1><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h1>
                   <p><?php the_excerpt(); ?></p>
                   <a href="<?php echo the_permalink(); ?>">Lees verder</a>
-                </td>
-              </tr>
+                </div>
+              </div>
               <?php
               }
 
               ?>
-          </table>
           </div>
 
           <?php

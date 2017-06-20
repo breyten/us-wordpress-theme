@@ -519,7 +519,7 @@ small.label {
     margin-top: 0; }
   /* line 91, /Users/Tom/Desktop/Projecten/US/middleman/source/css/sections/news.sass */
   #nieuws #articles table img {
-    display: none; }
+    margin-right: 10px; }
 /* line 93, /Users/Tom/Desktop/Projecten/US/middleman/source/css/sections/news.sass */
 #nieuws #articles tr {
   border-bottom: 1px solid #e7ecf1; }
