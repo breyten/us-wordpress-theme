@@ -72,7 +72,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                   } ?>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-                  <h1><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                  <h1 style="margin-top: 0;"><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h1>
                   <p><?php the_excerpt(); ?></p>
                   <a href="<?php echo the_permalink(); ?>">Lees verder</a>
                 </div>
