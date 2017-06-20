@@ -64,14 +64,14 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                   $wp_query->the_post();
               ?>
               <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" style="text-align: center;">
                   <?php
                   // check if the post has a Post Thumbnail assigned to it.
                   if ( has_post_thumbnail() ) {
                   	the_post_thumbnail('thumbnail');
                   } ?>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
                   <h1><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h1>
                   <p><?php the_excerpt(); ?></p>
                   <a href="<?php echo the_permalink(); ?>">Lees verder</a>
