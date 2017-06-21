@@ -134,7 +134,7 @@ function bootstrapBasicEnqueueScripts()
   wp_enqueue_script('html5-shiv-script', get_template_directory_uri() . '/js/vendor/html5shiv.js');
   wp_enqueue_script('jquery');
   wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/js/vendor/bootstrap.min.js');
-
+  
 }// bootstrapBasicEnqueueScripts
 add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
 
@@ -261,18 +261,6 @@ function myprefix_image_downsize( $value = false, $id, $size ) {
  * params are 3.
  */
 add_filter( 'image_downsize', 'myprefix_image_downsize', 1, 3 );
-
-
-/* custom post types on frontpage */
-function search_filter($query) {
-  if ( !is_admin() && $query->is_main_query() ) {
-    if ($query->is_search) {
-      $query->set('post_type', array( 'post', 'ecwd_event' ) );
-    }
-  }
-}
-
-add_action('pre_get_posts','search_filter');
 
 /**
  * Custom template tags for this theme.
