@@ -22,6 +22,11 @@
   margin: 5px 0;
 }
 
+.panel-title a {
+  width: 100%;
+  display: block;
+}
+
 @media only screen and (max-width: 480px) {
   .teams-overview .listing-item {
     text-align: center;
