@@ -1,6 +1,6 @@
 /*
 Theme Name: Bootstrap Basic
-Theme URI: 
+Theme URI:
 Author: Vee Winch
 Author URI: http://okvee.net
 Description: Bootstrap v.3 basic theme for developers to build their new theme very fast and easy.
@@ -52,4 +52,8 @@ Required WordPress CSS
 }
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
+}
+
+li.eo-event-future a {
+	display: block;
 }
