@@ -31,7 +31,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
             <p>
 				<?php echo get_bloginfo ( 'description' ); ?>
             </p>
-            <a class="btn primary" href="/vereniging/sponsor-worden/">Sponsor worden</a><a class="btn secundary" href="/inschrijven/">Lid worden</a>
+						<a class="btn primary" href="/inschrijven/">Lid worden</a>
+            <a class="btn secundary" href="/vereniging/sponsor-worden/">Sponsor worden</a>
           </div>
           <!--Rechter kolom, 1/3-->
           <div class="col-md-4 col-sm-4">

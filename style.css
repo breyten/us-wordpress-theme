@@ -54,6 +54,6 @@ Required WordPress CSS
 	margin: 0.8075em 0;
 }
 
-li.eo-event-future a {
+.eo-events-widget li a {
 	display: block;
 }
