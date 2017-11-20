@@ -11,7 +11,7 @@ get_header();
 $main_column_size = bootstrapBasicGetMainColumnSize();
 ?>
 <section id="header">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1218.3142648487055!2d4.9101274!3d52.3590223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc87ca30a72d9e3d!2sAmstel+Campus!5e0!3m2!1snl!2snl!4v1402665672962" frameborder="0" style="border:0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1218.3142648487055!2d4.9101274!3d52.3590223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc87ca30a72d9e3d!2sAmstelcampus!5e0!3m2!1snl!2snl!4v1402665672962" frameborder="0" style="border:0"></iframe>
     </section>
 <?php get_sidebar('left'); ?>
 <section id="main">
@@ -45,11 +45,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
           Adres
         </h1>
         <table>
-                      <tbody><tr>
-                        <td>
-                          Adres
-                        </td>
-                      </tr>
+                      <tbody>
                       <tr>
                         <td>
                           Universitaire Sportvereniging
