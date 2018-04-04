@@ -115,6 +115,16 @@ h2 {
   line-height: 21px;
   margin-bottom: 5px; }
 
+h3 {
+  font-size: 17px;
+  line-height: 21px;
+  margin-bottom: 5px; }
+
+h4 {
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 5px; }
+
 /* line 19, /Users/Tom/Desktop/Projecten/US/middleman/source/css/main.css.sass */
 section {
   margin-top: 30px; }
