@@ -1,6 +1,7 @@
 $ = jQuery;
 
   $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
     var collapseMenu, detailHeight, newsSlider;
     newsSlider = function() {
         console.log('initializing the news slider ...');
