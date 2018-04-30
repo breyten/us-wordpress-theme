@@ -38,10 +38,9 @@
         <li>
           <a href="/disclaimer/">disclaimer</a>
         </li>
-        <!--
         <li>
-          <a href="#">sitemap</a>
-      </li> -->
+          <a href="/privacy/">Privacy</a>
+        </li>
         <li>
           <a href="/contact/">mail de webmaster</a>
         </li>
