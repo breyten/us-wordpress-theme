@@ -87,15 +87,17 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	<div class="container">
 		<div class="row white">
 			<div class="col-md-12">
-				<div id="agenda-carousel" class="carousel">
+				<div id="agenda-carousel">
+					<h1>
+						Agenda
+					</h1>
 						<?php
-						// Get the last 10 posts in the special_cat category.
-						// 'orderby'         => 'eventstart'
-						query_posts('post_type=event&posts_per_page=5&orderby=eventstart&order=DESC');
-						while (have_posts()) {
-								the_post();
-								get_template_part('content', 'event');
-						}
+						$result = eventorganiser_list_events("showpastevents=false&posts_per_page=5", array(
+							'template' => '<h3 style="min-height: 90px;"><a href="%event_url%">%event_title%</a></h3><p>%start{j M Y}{ G:i}%<br>%event_venue%',
+							'class' => 'carousel'), 0);
+						echo str_replace(
+							array('<ul', '</ul>', '<li', '</li>'),
+							array('<div', '</div>', '<div', '</div>'), $result);
 						?>
 				</div>
 			</div>

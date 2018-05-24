@@ -72,6 +72,7 @@ $ = jQuery;
       swipe: true,
       autoplaySpeed: 2500,
       speed: 1200,
+      variableWidth: true,
       responsive: [
         {
           breakpoint: 1024,
