@@ -14,7 +14,7 @@
             <h1>
               Sponsors
             </h1>
-            <div id="carousel">
+            <div id="carousel" class="carousel">
                 <?php
                 // Get the last 10 posts in the special_cat category.
                 query_posts('post_type=sponsor&posts_per_page=100');

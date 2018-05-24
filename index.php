@@ -82,4 +82,23 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 		</div>
 	</div>
 </section>
+
+<section id="agenda">
+	<div class="container">
+		<div class="row white">
+			<div class="col-md-12">
+				<div id="agenda-carousel" class="carousel">
+						<?php
+						// Get the last 10 posts in the special_cat category.
+						query_posts('post_type=event&posts_per_page=5');
+						while (have_posts()) {
+								the_post();
+								get_template_part('content', 'event');
+						}
+						?>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <?php get_footer(); ?>

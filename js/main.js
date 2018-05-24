@@ -65,7 +65,7 @@ $ = jQuery;
       dots: true,
       pauseOnHover: false
     });
-    $("#carousel").slick({
+    $(".carousel").slick({
       slidesToShow: 8,
       slidesToScroll: 4,
       autoplay: true,
