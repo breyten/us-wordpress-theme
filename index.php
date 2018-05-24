@@ -90,7 +90,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				<div id="agenda-carousel" class="carousel">
 						<?php
 						// Get the last 10 posts in the special_cat category.
-						query_posts('post_type=event&posts_per_page=5&order=DESC');
+						// 'orderby'         => 'eventstart'
+						query_posts('post_type=event&posts_per_page=5&orderby=eventstart&order=DESC');
 						while (have_posts()) {
 								the_post();
 								get_template_part('content', 'event');
