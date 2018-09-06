@@ -24,7 +24,7 @@ function _output_meta($name, $values) {
 }
 
 $default_keys = array(
-  'Niveau', 'Trainingstijden', 'Trainer', 'Assistent trainer', 'Coach',
+  'Sponsor', 'Niveau', 'Trainingstijden', 'Trainer', 'Assistent trainer', 'Coach',
   'Assistent coach', 'Manager', 'TC-contactpersoon', 'Wedstrijdschema en stand'
 );
 
