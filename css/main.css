@@ -66,6 +66,11 @@ p img{
 	list-style-type: none; list-style-image: none; }
 #menu-sponsor-acties li {display: inline; }
 
+.teams-overview td, .teams-overview th  {
+  text-align: right;
+  width: 33%;
+}
+
 /* line 1, /Users/Tom/Desktop/Projecten/US/middleman/source/css/base/base.sass */
 * {
   -webkit-box-sizing: border-box;
