@@ -134,7 +134,7 @@ function bootstrapBasicEnqueueScripts()
   wp_enqueue_script('html5-shiv-script', get_template_directory_uri() . '/js/vendor/html5shiv.js');
   wp_enqueue_script('jquery');
   wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/js/vendor/bootstrap.min.js');
-  
+
 }// bootstrapBasicEnqueueScripts
 add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
 
@@ -256,6 +256,36 @@ function myprefix_image_downsize( $value = false, $id, $size ) {
     return false;
 }
 
+
+//Adding the Open Graph in the Language Attributes
+function add_opengraph_doctype( $output ) {
+  return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+add_filter('language_attributes', 'add_opengraph_doctype');
+
+//Lets add Open Graph Meta Info
+
+function insert_fb_in_head() {
+    global $post;
+    if ( !is_singular()) //if it is not a post or a page
+        return;
+        echo '<meta property="fb:admins" content="YOUR USER ID"/>';
+        echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+        echo '<meta property="og:type" content="article"/>';
+        echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+        echo '<meta property="og:site_name" content="US Volleybal"/>';
+    if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
+        $default_image="http://www.usvolleybal.nl/wp-content/uploads/2018/06/41899013115_9763522423_b.jpg"; //replace this with a default image on your server or an image in your media library
+        echo '<meta property="og:image" content="' . $default_image . '"/>';
+    }
+    else{
+        $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+        echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
+    }
+    echo "
+";
+}
+add_action( 'wp_head', 'insert_fb_in_head', 5 );
 /* Remove the height and width refernces from the image_downsize function.
  * We have added a new param, so the priority is 1, as always, and the new
  * params are 3.
