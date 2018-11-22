@@ -184,7 +184,8 @@ function us_custom_init() {
       ),
     )
   );
-  add_image_size( 'sponsor', 102, 52, true ); //(cropped)
+  //add_image_size( 'sponsor', 102, 52, true ); //(cropped)
+  add_image_size( 'sponsor', 102, 52 ); //(cropped)
 
   register_post_type(
     'team',
