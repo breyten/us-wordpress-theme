@@ -73,6 +73,11 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                       </tr>
                       <tr>
                         <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
                           Parkeren bij de hal kost 4 euro per uur. Bezoekers kunnen kijken op <a href="http://www.parkeren-amsterdam.com" target="_blank">Parkeren Amsterdam</a> voor goedkopere parkeeropties.
                         </td>
                       </tr>
