@@ -9,13 +9,18 @@
 <?php
 function _output_meta($name, $values) {
   if ((substr($name, 0, 1) != '_') && (substr($name, 0, 3) != 'US_')) {
-    echo "<h2>$name</h2><ul>";
+    echo "<h2>$name</h2>";
+    if (preg_match('/socials/i', $name)) {
+      echo "<ul class=\"list-inline\" style=\"padding-left: 40px;\">";
+    } else {
+      echo "<ul>";
+    }
     foreach($values as $value) {
       if (substr($value, 0, 4) == 'http') {
         if (preg_match('/twitter\.com\//i', $value)) {
-          echo "<li style="font-size: 32px; text-align: center;"><a href=\"$value\" target=\"_blank\"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>";
-        } elseif (preg_match('/twitter\.com\//i', $value)) {
-          echo "<li style="font-size: 32px; text-align: center;"><a href=\"$value\" target=\"_blank\"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>";
+          echo "<li style=\"font-size: 32px; text-align: center;\"><a href=\"$value\" target=\"_blank\"><i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i></a></li>";
+        } elseif (preg_match('/facebook\.com\//i', $value)) {
+          echo "<li style=\"font-size: 32px; text-align: center;\"><a href=\"$value\" target=\"_blank\"><i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i></a></li>";
         } else {
           echo "<li><a href=\"$value\" target=\"_blank\">Naar de pagina</a></li>";
         }
