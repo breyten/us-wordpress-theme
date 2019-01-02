@@ -11,5 +11,6 @@
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </li>
     </ul>
+		<p><i><?php the_time( get_option( 'date_format' ) ); ?></i></p>
   	<?php the_content(); ?>
 </div>
