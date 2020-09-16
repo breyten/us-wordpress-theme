@@ -15,7 +15,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 <section id="header">
 	<?php
 	  # TODO: figure out how to make configurable
-		$fp_images = array(2635);
+		$fp_images = array(3016);
 		$fp_id =  $fp_images[mt_rand(0, count($fp_images) - 1)];
 		echo wp_get_attachment_image( $fp_id, "large" );
 	?>

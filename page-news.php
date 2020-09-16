@@ -31,7 +31,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
               // Get the last 10 posts in the special_cat category.
               $wp_query = new WP_Query(array(
-                  'post_type' => post,
+                  'post_type' => 'post',
                   'posts_per_page' => '10',
                   'paged' => $paged
               ));
