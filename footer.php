@@ -26,6 +26,12 @@
             </div>
           </div>
         </div>
+        <div class="row white">
+          <div class="col-md-12">
+            <div id="mk-slider"></div>
+            <script src="https://www.sponsorlink.nl/js/snippet.js?key=15e6c0ae-3de5-4ac5-aa80-c835d1081303"></script>
+          </div>
+        </div>
       </div>
     </section>
   </div>
