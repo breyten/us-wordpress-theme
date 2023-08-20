@@ -13,6 +13,8 @@ if (!isset($content_width)) {
   $content_width = 1170;
 }
 
+	
+add_filter( 'flamingo_csv_field_prefix', '__return_empty_string' );
 
 /**
  * Setup theme and register support wp features.
