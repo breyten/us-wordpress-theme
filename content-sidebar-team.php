@@ -8,7 +8,7 @@
 
 <?php
 function _output_meta($name, $values) {
-  if ((substr($name, 0, 1) != '_') && (substr($name, 0, 3) != 'US_')) {
+  if ((substr($name, 0, 1) != '_') && (substr($name, 0, 3) != 'US_')&& (substr($name, 0, 6) != 'cmplz_')) {
     echo "<h2>$name</h2>";
     if (preg_match('/socials/i', $name)) {
       echo "<ul class=\"list-inline\" style=\"padding-left: 40px;\">";
